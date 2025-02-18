@@ -5,6 +5,41 @@ body, html {
                     AppleGothic, sans-serif;
 }
 
+.todo-category-red {
+    color: red;
+    /* background-color: red; */
+}
+
+.todo-category-orange {
+    color: orange;
+    /* background-color: orange; */
+}
+
+.todo-category-yellow {
+    color: yellow;
+    /* background-color: yellow; */
+}
+
+.todo-category-green {
+    color: green;
+    /* background-color: green; */
+}
+
+.todo-category-blue {
+    color: blue;
+    /* background-color: blue; */
+}
+
+.todo-category-indigo {
+    color: indigo;
+    /* background-color: indigo; */
+}
+
+.todo-category-violet {
+    color: violet;
+    /* background-color: violet; */
+}
+
 .todo-item-complete {
     color: grey;
     text-decoration: line-through;
@@ -16,5 +51,5 @@ body, html {
 }
 
 .todo-item-text-complete {
-    
+
 }

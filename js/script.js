@@ -1,5 +1,5 @@
 /* Data *//////////////////////////////////////////
-let cateories = {
+let categories = {
     "extracurricular": "red",
     "leisure": "orange",
     "life": "yellow",
@@ -22,31 +22,40 @@ document.addEventListener("DOMContentLoaded", function() {
         let todoFormName = document.getElementById("todo-form-name");
         let todoFormCategory = document.getElementById("todo-form-category");
 
-        /*
-            Later, each category should have its own todo list, and you should
-            add the todo to the relevant todo list
-        */
         let todo = document.createElement("li");
         let todoText = document.createElement("span");
         let todoTextContent = document.createTextNode(todoFormName.value);
         let todoCompleteIcon = document.createElement("i");
         let todoDeleteIcon = document.createElement("i");
-
-        /*
-            <i class="fa-regular fa-square"></i>
-            <i class="fa-regular fa-square-check"></i>
-        */
+        let todoCategory = document.createElement("i");
+        
         todoCompleteIcon.classList.add("fa-regular",  "fa-square");
         todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
         todoText.classList.add("todo-text");
         todo.classList.add("todo-item");
 
+        /*
+            Later, each category should have its own todo list, and you should
+            add the todo to the relevant todo list
+        */
+       let categoryClass = "todo-category-";
+
+        for (let category in categories) {
+            if (category === todoFormCategory.value) {
+                categoryClass += categories[category];
+                break;
+            }
+        }
+
+        todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
+        
         todoCompleteIcon.addEventListener("click", handleTodoComplete);
         todoDeleteIcon.addEventListener("click", handleTodoDelete);
 
         todoText.appendChild(todoTextContent);
         todo.appendChild(todoCompleteIcon);
         todo.appendChild(todoText);
+        todo.appendChild(todoCategory);
         todo.appendChild(todoDeleteIcon);
 
         todoList.appendChild(todo);
