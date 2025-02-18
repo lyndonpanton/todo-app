@@ -20,12 +20,19 @@ document.addEventListener("DOMContentLoaded", function() {
         let todo = document.createElement("li");
         let todoCheckbox = document.createElement("input");
         let todoText = document.createTextNode(todoFormName.value);
+        let todoDeleteIcon = document.createElement("i");
+        let todoCompleteIcon = document.createElement("i");
+
+        todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
+        todoCompleteIcon.classList.add("fa-regular",  "fa-square-check");
+        todo.classList.add("todo-list-item");
 
         todoCheckbox.type = "checkbox";
 
-        todo.classList.add("todo-list-item");
-        todo.appendChild(todoCheckbox);
+        todo.appendChild(todoCompleteIcon);
+        // todo.appendChild(todoCheckbox);
         todo.appendChild(todoText);
+        todo.appendChild(todoDeleteIcon);
 
         todoList.appendChild(todo);
     }
