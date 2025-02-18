@@ -1,6 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
     let todoForm = document.getElementById("todo-form");
     todoForm.addEventListener("submit", handleTodoFormSubmission);
+
+    function handleTodoComplete(event) {
+        let todo = event.target.parentElement;
+
+        if (todo.classList.contains("todo-item-complete")) {
+            todo.classList.remove("todo-item-complete");
+        } else {
+            todo.classList.add("todo-item-complete");
+        }
+        // Styling: grey, strikethrough, ligher font weight
+        console.log(todo);
+    }
+
+    function handleTodoDelete(event) {
+
+    }
     
     function handleTodoFormSubmission(event) {
         event.preventDefault();
@@ -9,10 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let todoFormName = document.getElementById("todo-form-name");
         let todoFormCategory = document.getElementById("todo-form-category");
 
-        console.log(todoList.id);
-        console.log(todoFormName.value);
-        console.log(todoFormCategory.value);
-
         /*
             Later, each category should have its own todo list, and you should
             add the todo to the relevant todo list
@@ -20,14 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
         let todo = document.createElement("li");
         let todoCheckbox = document.createElement("input");
         let todoText = document.createTextNode(todoFormName.value);
-        let todoDeleteIcon = document.createElement("i");
         let todoCompleteIcon = document.createElement("i");
+        let todoDeleteIcon = document.createElement("i");
 
-        todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
         todoCompleteIcon.classList.add("fa-regular",  "fa-square-check");
+        todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
         todo.classList.add("todo-item");
 
         todoCheckbox.type = "checkbox";
+
+        todoCompleteIcon.addEventListener("click", handleTodoComplete);
+        todoDeleteIcon.addEventListener("click", handleTodoDelete);
 
         todo.appendChild(todoCompleteIcon);
         todo.appendChild(todoText);
@@ -35,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         todoList.appendChild(todo);
 
-        // Clear the input field
         todoFormName.value = "";
     }
 });

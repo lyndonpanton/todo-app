@@ -4,3 +4,13 @@ body, html {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
                     AppleGothic, sans-serif;
 }
+
+.todo-item {
+
+}
+
+.todo-item-complete {
+    color: grey;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
