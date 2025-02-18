@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoDelete(event) {
-
+        let todo = event.target.parentElement;
+        todo.remove();
     }
     
     function handleTodoFormSubmission(event) {
