@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
             add the todo to the relevant todo list
         */
         let todo = document.createElement("li");
-        let todoText = document.createTextNode(
-            todoFormName.value
-        );
+        let todoCheckbox = document.createElement("input");
+        let todoText = document.createTextNode(todoFormName.value);
+
+        todoCheckbox.type = "checkbox";
 
         todo.classList.add("todo-list-item");
+        todo.appendChild(todoCheckbox);
         todo.appendChild(todoText);
 
         todoList.appendChild(todo);
