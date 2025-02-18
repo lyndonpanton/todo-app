@@ -53,5 +53,6 @@ category
 ### Conflicts
 
 - Categories cannot have the same name
+- Todo items cannot be created without a category
 - Todo items should be differentiated by something other than name (i.e.,
 _todo-id_)
