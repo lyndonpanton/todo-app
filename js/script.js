@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
         todoCompleteIcon.classList.add("fa-regular",  "fa-square-check");
-        todo.classList.add("todo-list-item");
+        todo.classList.add("todo-item");
 
         todoCheckbox.type = "checkbox";
 
