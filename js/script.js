@@ -27,18 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
             add the todo to the relevant todo list
         */
         let todo = document.createElement("li");
-        let todoCheckbox = document.createElement("input");
         let todoText = document.createElement("span");
         let todoTextContent = document.createTextNode(todoFormName.value);
         let todoCompleteIcon = document.createElement("i");
         let todoDeleteIcon = document.createElement("i");
 
-        todoCompleteIcon.classList.add("fa-regular",  "fa-square-check");
+        /*
+            <i class="fa-regular fa-square"></i>
+            <i class="fa-regular fa-square-check"></i>
+        */
+        todoCompleteIcon.classList.add("fa-regular",  "fa-square");
         todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
         todoText.classList.add("todo-text");
         todo.classList.add("todo-item");
-
-        todoCheckbox.type = "checkbox";
 
         todoCompleteIcon.addEventListener("click", handleTodoComplete);
         todoDeleteIcon.addEventListener("click", handleTodoDelete);
@@ -55,11 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleTodoComplete(event) {
         let todo = event.target.parentElement;
+        let todoCheckbox = event.target;
 
         if (todo.classList.contains("todo-item-complete")) {
             todo.classList.remove("todo-item-complete");
+
+            todoCheckbox.classList.remove("fa-square-check");
+            todoCheckbox.classList.add("fa-square");
         } else {
             todo.classList.add("todo-item-complete");
+
+            todoCheckbox.classList.add("fa-square-check");
+            todoCheckbox.classList.remove("fa-square");
         }
     }
 

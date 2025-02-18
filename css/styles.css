@@ -5,12 +5,16 @@ body, html {
                     AppleGothic, sans-serif;
 }
 
-/* .todo-item {
-
-} */
-
 .todo-item-complete {
     color: grey;
     text-decoration: line-through;
     font-weight: lighter;
+}
+
+.todo-item-text {
+
+}
+
+.todo-item-text-complete {
+    
 }
