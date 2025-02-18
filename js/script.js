@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let todoFormName = document.getElementById("todo-form-name");
         let todoFormCategory = document.getElementById("todo-form-category");
 
-        console.log(todoList.getAttribute("id"));
-        console.log(todoFormName.getAttribute("placeholder"));
-        console.log(todoFormCategory.getAttribute("value"));
+        console.log(todoList.id);
+        console.log(todoFormName.value);
+        console.log(todoFormCategory.value);
 
         /*
             Later, each category should have its own todo list, and you should
@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", function() {
         todoCheckbox.type = "checkbox";
 
         todo.appendChild(todoCompleteIcon);
-        // todo.appendChild(todoCheckbox);
         todo.appendChild(todoText);
         todo.appendChild(todoDeleteIcon);
 
         todoList.appendChild(todo);
+
+        // Clear the input field
+        todoFormName.value = "";
     }
 });
