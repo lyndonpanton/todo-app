@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             todo.classList.add("todo-item-complete");
         }
-        // Styling: grey, strikethrough, ligher font weight
-        console.log(todo);
     }
 
     function handleTodoDelete(event) {
