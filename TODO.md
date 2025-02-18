@@ -15,8 +15,8 @@ A list of tasks to complete for the todo-app project.
 
 ### Functionality
 
-- [ ] Todo checkbox icon should change depending on its completed state
-- [ ] Todo input should not have suggestions
+- [x] Todo checkbox icon should change depending on its completed state
+- [x] Todo input should not have suggestions
 - [ ] Users should be able to categorise todo items
     - Change categoriees to use a coloured circle icon instead of coloured text
 - [ ] Users should be able to view each category of items individually
