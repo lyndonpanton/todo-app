@@ -15,11 +15,15 @@ A list of tasks to complete for the todo-app project.
 
 ### Functionality
 
+- [ ] Todo input should not have suggestions
 - [ ] Users should be able to categorise todo items
+    - Change categoriees to use a coloured circle icon instead of coloured text
 - [ ] Users should be able to view each category of items individually
 - [ ] Users should be able to create categories
 - [ ] Users should be able to delete categories
-    - Deleting a category should delete all todo items in that cateogory
+    - Deleting a category should delete all todo items in that cateogory. A
+    warning should be given if the category that is about to be deleted as any
+    todo items in it.
 - [ ] Users should be able to modify the name of a category
 - [ ] Users should be warned if they attempt to create a todo item with the same
 name as another todo item
