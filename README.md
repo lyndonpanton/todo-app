@@ -10,6 +10,7 @@ as well as group their todo items into specific categories.
 - HTML
 - CSS
 - JavaScript
+- PHP
 
 ## Credits
 
