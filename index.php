@@ -1,6 +1,16 @@
 <?php
     $app_title = "Todo App";
-    $h1 = "Todo App";    
+    $h1 = "Todo App";
+    $categories = [
+        "all",
+        "extracurricular",
+        "leisure",
+        "life",
+        "school",
+        "work",
+        "travel",
+        "work"
+    ];
 ?>
 
 <!DOCTYPE HTML>
@@ -26,14 +36,13 @@
         <main>
             <section id="todo-app">
                 <section id="todo-categories">
-                    <button id="todo-category-button-all" class="todo-category-button">All</button>
-                    <button id="todo-category-button-extracurricular" class="todo-category-button">Extracurricular</button>
-                    <button id="todo-category-button-leisure" class="todo-category-button">Leisure</button>
-                    <button id="todo-category-button-life" class="todo-category-button">Life</button>
-                    <button id="todo-category-button-school" class="todo-category-button">School</button>
-                    <button id="todo-category-button-shopping" class="todo-category-button">Shopping</button>
-                    <button id="todo-category-button-travel" class="todo-category-button">Travel</button>
-                    <button id="todo-category-button-work" class="todo-category-button">Work</button>
+                    <?php
+                        foreach ($categories as $category) {
+                            echo "<button id=\"todo-category-button-{$category}\""
+                                    . "class=\"todo-category-button\">" . ucfirst(strtolower($category))
+                                    . "</button>";
+                        }
+                    ?>
                 </section>
                 <article id="todo-list">
                     <section id="todo-list-all" class="todo-list">
