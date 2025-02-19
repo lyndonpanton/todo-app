@@ -14,8 +14,30 @@ let nullCategory = "all";
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
+    let categoryButtons = document.getElementsByClassName("todo-category-button");
+
+    for (let i = 0; i < categoryButtons.length; i++) {
+        categoryButtons[i].addEventListener("click", handleCategoryChange);
+    }
+
     let todoForm = document.getElementById("todo-form");
     todoForm.addEventListener("submit", handleTodoAdd);
+
+    function handleCategoryChange(event) {
+        let categories = document.getElementsByClassName("todo-category");
+        let targetLastHyphenIndex = event.target.id.lastIndexOf("-");
+
+        for (let i = 0; i < categories.length; i++) {
+            let lastHyphenIndex = categories[i].id.lastIndexOf("-");
+                    
+            if (categories[i].id.slice(lastHyphenIndex + 1)
+                == event.target.id.slice(targetLastHyphenIndex + 1)) {
+                    categories[i].classList.remove("todo-category-hidden");
+            } else {
+                categories[i].classList.add("todo-category-hidden");
+            }
+        }
+    }
     
     function handleTodoAdd(event) {
         event.preventDefault();
@@ -50,13 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 categoryClass += nullCategory;
             }
         }
-
-        // for (let category in categories) {
-        //     if (category === todoFormCategory.value) {
-        //         categoryClass += categories[category];
-        //         break;
-        //     }
-        // }
 
         todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
         

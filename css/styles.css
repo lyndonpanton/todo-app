@@ -5,6 +5,14 @@ body, html {
                     AppleGothic, sans-serif;
 }
 
+.todo-category {
+
+}
+
+.todo-category-hidden {
+    display: none;
+}
+
 .todo-category-red {
     color: red;
 }
