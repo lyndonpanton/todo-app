@@ -1,3 +1,8 @@
+<?php
+    $app_title = "Todo App";
+    $h1 = "Todo App";    
+?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -7,7 +12,7 @@
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-        <title>Todo App</title>
+        <title><?php echo $app_title; ?></title>
 
         <link rel="icon" type="image/x-icon" href="./img/todo-list.ico" />
         <link rel="stylesheet" type="text/css" href="./css/styles.css" />
@@ -15,7 +20,7 @@
     </head>
     <body>
         <header>
-            <h1>Todo App</h1>
+            <h1><?php echo $h1; ?></h1>
         </header>
 
         <main>
