@@ -45,32 +45,14 @@
                     ?>
                 </section>
                 <article id="todo-list">
-                    <section id="todo-list-all" class="todo-list">
-
-                    </section>
                     <!-- Colour should not be used to represent information,
                             change categories to use unique icons -->
-                    <section id="todo-list-extracurricular" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-leisure" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-life" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-school" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-shopping" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-travel" class="todo-list todo-list-hidden">
-
-                    </section>
-                    <section id="todo-list-work" class="todo-list todo-list-hidden">
-
-                    </section>
+                    <?php
+                        foreach ($categories as $category) {
+                            echo "<section id=\"todo-list-{$category}\" class=\"todo-list\""
+                                    . "></section>";
+                        }
+                    ?>
                 </article>
 
                 <form name="todo-form" action="./" method="GET" id="todo-form">
