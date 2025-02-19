@@ -1,3 +1,27 @@
+<!-- Database -->
+<?php
+    $host = "localhost";
+    $user = "lyndon";
+    $pass = "my_password";
+    $db = "todo_app";
+
+    $conn = new mysqli($host, $user, $pass, $db);
+
+    if ($conn->connect_error) {
+        die("Database connection failed");
+    } else {
+        echo "Successfully conntected to database: " . $db . ".";
+    }
+
+    // try {
+    //     $conn = new PDO("mysql:host=$host,database=$db" , $user , $pass);
+    //     $conn−> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // } catch (PDOException $e) {
+    //     echo "Connection failed: " . $e−>getMessage ();
+    // }
+?>
+
+<!-- Local -->
 <?php
     $app_title = "Todo App";
     $h1 = "Todo App";
