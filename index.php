@@ -9,8 +9,7 @@
 
         <title>Todo App</title>
 
-        <!-- Add custom tab icon -->
-        <link rel="icon" type="image/x-icon" href="" />
+        <link rel="icon" type="image/x-icon" href="./img/todo-list.ico" />
         <link rel="stylesheet" type="text/css" href="./css/styles.css" />
         <script src="https://kit.fontawesome.com/3556eab2e4.js" crossorigin="anonymous"></script>
     </head>
