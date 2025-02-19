@@ -19,17 +19,12 @@ A list of tasks to complete for the todo-app project.
 - [x] Todo input should not have suggestions
 - [x] Categories should be displayed on todo items via colour
 - [ ] Each category dropdown option should have a colour displayed next to it
-- [ ] Users should be able to categorise todo items
+- [x] Users should be able to categorise todo items
     - Change categoriees to use a coloured circle icon instead of coloured text
 - [ ] Users should be able to view each category of items individually
-- [ ] Users should be able to create categories
-- [ ] Users should be able to delete categories
-    - Deleting a category should delete all todo items in that cateogory. A
-    warning should be given if the category that is about to be deleted as any
-    todo items in it.
-- [ ] Users should be able to modify the name of a category
 - [ ] Users should be warned if they attempt to create a todo item with the same
 name as another todo item
+- [ ] Users should be able to change the category of a todo item
 - [ ] Users should be able to restore todo items from a recycling bin
 - [ ] Users should be able to permenantly delete todo items in the recycling bin
 - [ ] Users should be able to select a group of todo items simultaneuously
@@ -52,7 +47,14 @@ category
 
 ### Conflicts
 
-- Categories cannot have the same name
-- Todo items cannot be created without a category
-- Todo items should be differentiated by something other than name (i.e.,
+- [ ] Categories cannot have the same name
+- [ ] Todo items cannot be created without a category
+- [ ] Todo items should be differentiated by something other than name (i.e.,
 _todo-id_)
+
+### Bonus
+
+- Allow users to create, update, and delete their own categories
+    - Deleting a category should delete all todo items in that cateogory. A
+    warning should be given if the category that is about to be deleted as any
+    todo items in it.

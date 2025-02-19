@@ -9,6 +9,8 @@ let categories = {
     "work": "violet"
 };
 
+let nullCategory = "all";
+
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
@@ -38,14 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
             Later, each category should have its own todo list, and you should
             add the todo to the relevant todo list
         */
-       let categoryClass = "todo-category-";
+        let categoryClass = "todo-category-";
 
-        for (let category in categories) {
-            if (category === todoFormCategory.value) {
+        for (let i = 0; i < Object.keys(categories).length; i++) {
+            if (categories[i] === todoFormCategory.value) {
                 categoryClass += categories[category];
                 break;
+            } else if (i == Object.keys(categories).length - 1) {
+                categoryClass += nullCategory;
             }
         }
+
+        // for (let category in categories) {
+        //     if (category === todoFormCategory.value) {
+        //         categoryClass += categories[category];
+        //         break;
+        //     }
+        // }
 
         todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
         

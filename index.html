@@ -21,8 +21,43 @@
 
         <main>
             <section id="todo-app">
+                <section id="todo-categories">
+                    <button id="todo-category-button-all" class="todo-category-button">All</button>
+                    <button id="todo-category-button-extracurricular" class="todo-category-button">Extracurricular</button>
+                    <button id="todo-category-button-leisure" class="todo-category-button">Leisure</button>
+                    <button id="todo-category-button-life" class="todo-category-button">Life</button>
+                    <button id="todo-category-button-school" class="todo-category-button">School</button>
+                    <button id="todo-category-button-shopping" class="todo-category-button">Shopping</button>
+                    <button id="todo-category-button-travel" class="todo-category-button">Travel</button>
+                    <button id="todo-category-button-work" class="todo-category-button">Work</button>
+                </section>
                 <article id="todo-list">
+                    <section id="todo-category-all" class="todo-list-category">
 
+                    </section>
+                    <!-- Colour should not be used to represent information,
+                            change categories to use unique icons -->
+                    <section id="todo-category-extracurricular" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-leisure" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-life" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-school" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-shopping" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-travel" class="todo-list-category">
+
+                    </section>
+                    <section id="todo-category-work" class="todo-list-category">
+
+                    </section>
                 </article>
 
                 <form name="todo-form" action="./" method="GET" id="todo-form">
@@ -32,14 +67,30 @@
                         should be placed in
                     -->
                     <select id="todo-form-category" name="todo-form-category">
-                        <option name="todo-form-category" value="">---</option>
-                        <option name="todo-form-category" value="extracurricular">Extracurricular</option>
-                        <option name="todo-form-category" value="leisure">Leisure</option>
-                        <option name="todo-form-category" value="life">Life</option>
-                        <option name="todo-form-category" value="school">School</option>
-                        <option name="todo-form-category" value="shopping">Shopping</option>
-                        <option name="todo-form-category" value="travel">Travel</option>
-                        <option name="todo-form-category" value="work">Work</option>
+                        <option name="todo-form-category" value="">
+                            ---
+                        </option>
+                        <option name="todo-form-category" value="extracurricular">
+                            Extracurricular
+                        </option>
+                        <option name="todo-form-category" value="leisure">
+                            Leisure
+                        </option>
+                        <option name="todo-form-category" value="life">
+                            Life
+                        </option>
+                        <option name="todo-form-category" value="school">
+                            School
+                        </option>
+                        <option name="todo-form-category" value="shopping">
+                            Shopping
+                        </option>
+                        <option name="todo-form-category" value="travel">
+                            Travel
+                        </option>
+                        <option name="todo-form-category" value="work">
+                            Work
+                        </option>
                     </select>
 
                     <input type="submit" id="todo-form-submit" value="Add Todo" />
