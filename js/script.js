@@ -1,5 +1,6 @@
 /* Data *//////////////////////////////////////////
 let categories = {
+    "all": "grey",
     "extracurricular": "red",
     "leisure": "orange",
     "life": "yellow",
@@ -10,21 +11,29 @@ let categories = {
 };
 
 let nullCategory = "all";
+let currentCateory = "all";
 
+/* Store todo information in JavaScript so you can use the "all" display */
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
+    /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
 
     for (let i = 0; i < categoryButtons.length; i++) {
         categoryButtons[i].addEventListener("click", handleCategoryChange);
     }
 
+    /* Change todo category */
+    let categoryDropdown = document.getElementById("todo-form-category");
+    categoryDropdown.addEventListener("change", handleTodoCategoryChange);
+
+    /* Submit todo form */
     let todoForm = document.getElementById("todo-form");
     todoForm.addEventListener("submit", handleTodoAdd);
 
     function handleCategoryChange(event) {
-        let categories = document.getElementsByClassName("todo-category");
+        let categories = document.getElementsByClassName("todo-list");
         let targetLastHyphenIndex = event.target.id.lastIndexOf("-");
 
         for (let i = 0; i < categories.length; i++) {
@@ -32,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     
             if (categories[i].id.slice(lastHyphenIndex + 1)
                 == event.target.id.slice(targetLastHyphenIndex + 1)) {
-                    categories[i].classList.remove("todo-category-hidden");
+                    categories[i].classList.remove("todo-list-hidden");
             } else {
-                categories[i].classList.add("todo-category-hidden");
+                categories[i].classList.add("todo-list-hidden");
             }
         }
     }
@@ -42,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTodoAdd(event) {
         event.preventDefault();
 
-        let todoList = document.getElementById("todo-list");
+        let todoList = document.getElementById("todo-list-" + currentCateory);
         let todoFormName = document.getElementById("todo-form-name");
         let todoFormCategory = document.getElementById("todo-form-category");
 
@@ -68,9 +77,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (categories[i] === todoFormCategory.value) {
                 categoryClass += categories[category];
                 break;
-            } else if (i == Object.keys(categories).length - 1) {
-                categoryClass += nullCategory;
             }
+            
+            // else if (i == Object.keys(categories).length - 1) {
+            //     categoryClass += nullCategory;
+            // }
         }
 
         todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
@@ -87,6 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
         todoList.appendChild(todo);
 
         todoFormName.value = "";
+    }
+
+    function handleTodoCategoryChange(event) {
+        currentCateory = event.target.value;
     }
 
     function handleTodoComplete(event) {

@@ -5,11 +5,11 @@ body, html {
                     AppleGothic, sans-serif;
 }
 
-.todo-category {
+.todo-list {
 
 }
 
-.todo-category-hidden {
+.todo-list-hidden {
     display: none;
 }
 
