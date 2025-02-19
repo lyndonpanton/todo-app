@@ -58,3 +58,9 @@ _todo-id_)
     warning should be given if the category that is about to be deleted as any
     todo items in it.
 - Allow users to change the category of individual todo items
+
+### Bugs
+
+- Since the dropdown does not reset when the user refreshes the page but the
+current category does, the category will be defined as the default category
+until the dropdown option is changed

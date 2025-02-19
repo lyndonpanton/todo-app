@@ -57,35 +57,21 @@
 
                 <form name="todo-form" action="./" method="GET" id="todo-form">
                     <input autocomplete="off" type="text" id="todo-form-name" name="todo-form-name" placeholder="Go for a walk..." />
-                    <!--
-                        Allow user to define which category the new todo item
-                        should be placed in
-                    -->
+
                     <select id="todo-form-category" name="todo-form-category">
-                        <option name="todo-form-category" value="all">
-                            ---
-                        </option>
-                        <option name="todo-form-category" value="extracurricular">
-                            Extracurricular
-                        </option>
-                        <option name="todo-form-category" value="leisure">
-                            Leisure
-                        </option>
-                        <option name="todo-form-category" value="life">
-                            Life
-                        </option>
-                        <option name="todo-form-category" value="school">
-                            School
-                        </option>
-                        <option name="todo-form-category" value="shopping">
-                            Shopping
-                        </option>
-                        <option name="todo-form-category" value="travel">
-                            Travel
-                        </option>
-                        <option name="todo-form-category" value="work">
-                            Work
-                        </option>
+                        <?php
+                            foreach ($categories as $category) {
+                                echo "<option name=\"todo-form-category\" value=\"{$category}\">";
+
+                                if ($category == "all") {
+                                    echo "---";
+                                } else {
+                                    echo ucfirst(strtolower($category));
+                                }
+
+                                echo "</option>";
+                            }
+                        ?>
                     </select>
 
                     <input type="submit" id="todo-form-submit" value="Add Todo" />
