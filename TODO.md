@@ -8,6 +8,7 @@ A list of tasks to complete for the todo-app project.
 
 ### Data
 
+- [ ] Connect PHP to PDO or MySQLi
 - [ ] Todo items should be retrieved from a database when the application starts
 - [ ] Todo items should be added to a database when created
 - [ ] Todo items should be removed from a database when deleted
