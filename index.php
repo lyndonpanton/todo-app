@@ -7,7 +7,7 @@
         "leisure",
         "life",
         "school",
-        "work",
+        "shopping",
         "travel",
         "work"
     ];

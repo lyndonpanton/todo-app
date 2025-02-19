@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < Object.keys(categories).length; i++) {
             if (categories[i] === todoFormCategory.value) {
                 categoryClass += categories[category];
+                console.log(categoryClass);
                 break;
             }
             
