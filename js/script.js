@@ -73,17 +73,28 @@ document.addEventListener("DOMContentLoaded", function() {
         */
         let categoryClass = "todo-category-";
 
-        for (let i = 0; i < Object.keys(categories).length; i++) {
-            if (categories[i] === todoFormCategory.value) {
+        for (category in categories) {
+            if (category == todoFormCategory.value) {
                 categoryClass += categories[category];
                 console.log(categoryClass);
                 break;
             }
-            
-            // else if (i == Object.keys(categories).length - 1) {
-            //     categoryClass += nullCategory;
-            // }
         }
+
+        // for (let i = 0; i < Object.keys(categories).length; i++) {
+        //     console.log(i);
+        //     console.log(categories[i] + " vs. " + todoFormCategory.value);
+
+        //     if (categories[i] === todoFormCategory.value) {
+        //         categoryClass += categories[category];
+        //         console.log(categoryClass);
+        //         break;
+        //     }
+            
+        //     // else if (i == Object.keys(categories).length - 1) {
+        //     //     categoryClass += nullCategory;
+        //     // }
+        // }
 
         todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
         
