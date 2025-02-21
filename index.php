@@ -9,8 +9,6 @@
 
     if ($conn->connect_error) {
         die("Database connection failed");
-    } else {
-        echo "Successfully conntected to database: " . $db . ".";
     }
 
     // try {

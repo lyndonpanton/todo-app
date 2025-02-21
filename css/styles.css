@@ -1,8 +1,51 @@
+/*
+    main-color: rbg(80, 80, 180)
+    
+*/
+
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
                     AppleGothic, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
+    padding: 20px 0 0px;
+    height: 80px;
+    background-color: rgb(80, 80, 180);
+    color: white;
+}
+
+.hamburger {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 2em;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+.hamburger-container {
+    position: absolute;
+    top: 40px;
+
+
+    /* display: inline-block; */
+    /* width: 20%; */
 }
 
 .todo-list {
@@ -57,4 +100,16 @@ body, html {
 
 .todo-item-text-complete {
 
+}
+
+@media screen and (max-width: 500px) {
+    
+}
+
+@media screen and (min-width: 500px) and  (max-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
 }

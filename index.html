@@ -16,6 +16,7 @@
     </head>
     <body>
         <header>
+            <i class="fa-solid fa-bars hamburger"></i>
             <h1>Todo App</h1>
         </header>
 
@@ -31,70 +32,72 @@
                     <button id="todo-category-button-travel" class="todo-category-button">Travel</button>
                     <button id="todo-category-button-work" class="todo-category-button">Work</button>
                 </section>
-                <article id="todo-list">
-                    <section id="todo-list-all" class="todo-list">
+                <section>
+                    <article id="todo-list">
+                        <section id="todo-list-all" class="todo-list">
 
-                    </section>
-                    <!-- Colour should not be used to represent information,
-                            change categories to use unique icons -->
-                    <section id="todo-list-extracurricular" class="todo-list todo-list-hidden">
+                        </section>
+                        <!-- Colour should not be used to represent information,
+                                change categories to use unique icons -->
+                        <section id="todo-list-extracurricular" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-leisure" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-leisure" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-life" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-life" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-school" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-school" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-shopping" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-shopping" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-travel" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-travel" class="todo-list todo-list-hidden">
 
-                    </section>
-                    <section id="todo-list-work" class="todo-list todo-list-hidden">
+                        </section>
+                        <section id="todo-list-work" class="todo-list todo-list-hidden">
 
-                    </section>
-                </article>
+                        </section>
+                    </article>
 
-                <form name="todo-form" action="./" method="GET" id="todo-form">
-                    <input autocomplete="off" type="text" id="todo-form-name" name="todo-form-name" placeholder="Go for a walk..." />
-                    <!--
-                        Allow user to define which category the new todo item
-                        should be placed in
-                    -->
-                    <select id="todo-form-category" name="todo-form-category">
-                        <option name="todo-form-category" value="all">
-                            ---
-                        </option>
-                        <option name="todo-form-category" value="extracurricular">
-                            Extracurricular
-                        </option>
-                        <option name="todo-form-category" value="leisure">
-                            Leisure
-                        </option>
-                        <option name="todo-form-category" value="life">
-                            Life
-                        </option>
-                        <option name="todo-form-category" value="school">
-                            School
-                        </option>
-                        <option name="todo-form-category" value="shopping">
-                            Shopping
-                        </option>
-                        <option name="todo-form-category" value="travel">
-                            Travel
-                        </option>
-                        <option name="todo-form-category" value="work">
-                            Work
-                        </option>
-                    </select>
+                    <form name="todo-form" action="./" method="GET" id="todo-form">
+                        <input autocomplete="off" type="text" id="todo-form-name" name="todo-form-name" placeholder="Go for a walk..." />
+                        <!--
+                            Allow user to define which category the new todo item
+                            should be placed in
+                        -->
+                        <select id="todo-form-category" name="todo-form-category">
+                            <option name="todo-form-category" value="all">
+                                ---
+                            </option>
+                            <option name="todo-form-category" value="extracurricular">
+                                Extracurricular
+                            </option>
+                            <option name="todo-form-category" value="leisure">
+                                Leisure
+                            </option>
+                            <option name="todo-form-category" value="life">
+                                Life
+                            </option>
+                            <option name="todo-form-category" value="school">
+                                School
+                            </option>
+                            <option name="todo-form-category" value="shopping">
+                                Shopping
+                            </option>
+                            <option name="todo-form-category" value="travel">
+                                Travel
+                            </option>
+                            <option name="todo-form-category" value="work">
+                                Work
+                            </option>
+                        </select>
 
-                    <input type="submit" id="todo-form-submit" value="Add Todo" />
-                </form>
+                        <input type="submit" id="todo-form-submit" value="Add Todo" />
+                    </form>
+                </section>
             </section>
         </main>
 
