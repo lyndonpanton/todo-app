@@ -32,10 +32,10 @@ name as another todo item
 
 ### Styling
 
-- [ ] Create wireframe prototypes of multiple screen sizes
-    - [ ] Create a wireframe prototype for mobile devices
-    - [ ] Create a wireframe prototype for tablet devices
-    - [ ] Create a wireframe prototype for desktop devices
+- [x] Create wireframe prototypes of multiple screen sizes
+    - [x] Create a wireframe prototype for mobile devices
+    - [x] Create a wireframe prototype for tablet devices
+    - [x] Create a wireframe prototype for desktop devices
 - [ ] Create interfaces for multiple screen sizes
     - [ ] Create an interface for mobile devices
     - [ ] Create an interface for tablet devices
