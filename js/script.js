@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let hamburger = document.getElementById("hamburger");
     hamburger.addEventListener("click", toggleSideBar);
 
+    /* Update footer date */
+    let currentYear = document.getElementById("current-year");
+    currentYear.textContent = new Date().getFullYear();
+
     function handleCategoryChange(event) {
         let categories = document.getElementsByClassName("todo-list");
         let targetLastHyphenIndex = event.target.id.lastIndexOf("-");
