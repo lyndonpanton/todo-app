@@ -42,10 +42,19 @@ header {
 .hamburger-container {
     position: absolute;
     top: 40px;
+}
 
+.todo-category-button {
+    display: block;
 
-    /* display: inline-block; */
-    /* width: 20%; */
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1.2em;
+    text-align: left;
+    color: white;
 }
 
 .todo-list {
@@ -54,6 +63,14 @@ header {
 
 .todo-list-hidden {
     display: none;
+}
+
+#todo-categories {
+    width: 200px;
+    position: absolute;
+    height: 100%;
+    background-color: #0F96FC;
+    background-color: rgb(80, 80, 180);
 }
 
 .todo-category-grey {
