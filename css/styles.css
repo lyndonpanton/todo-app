@@ -30,15 +30,6 @@ header {
     color: white;
 }
 
-.hamburger {
-    position: absolute;
-    top: 25px;
-    left: 20px;
-    font-size: 2em;
-    display: block;
-    /* margin: 0 auto; */
-}
-
 .hamburger-container {
     position: absolute;
     top: 40px;
@@ -66,11 +57,24 @@ header {
 }
 
 #todo-categories {
+    left: -200px;
     width: 200px;
     position: absolute;
     height: 100%;
-    background-color: #0F96FC;
+    /* background-color: #0F96FC; */
     background-color: rgb(80, 80, 180);
+
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.todo-categories-open {
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+    left: 0px !important;
 }
 
 .todo-category-grey {
@@ -117,6 +121,15 @@ header {
 
 .todo-item-text-complete {
 
+}
+
+#hamburger {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 2em;
+    display: block;
+    /* margin: 0 auto; */
 }
 
 @media screen and (max-width: 500px) {

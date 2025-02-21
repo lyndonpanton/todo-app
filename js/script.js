@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let todoForm = document.getElementById("todo-form");
     todoForm.addEventListener("submit", handleTodoAdd);
 
+    /* Toogle side bar */
+    let hamburger = document.getElementById("hamburger");
+    hamburger.addEventListener("click", toggleSideBar);
+
     function handleCategoryChange(event) {
         let categories = document.getElementsByClassName("todo-list");
         let targetLastHyphenIndex = event.target.id.lastIndexOf("-");
@@ -136,5 +140,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTodoDelete(event) {
         let todo = event.target.parentElement;
         todo.remove();
+    }
+
+    function toggleSideBar(event) {
+        let sidebar = document.getElementById("todo-categories");
+
+        if (sidebar.classList.contains("todo-categories-open")) {
+            sidebar.classList.remove("todo-categories-open");
+        } else {
+            sidebar.classList.add("todo-categories-open");
+        }
     }
 });
