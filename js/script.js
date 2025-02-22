@@ -11,7 +11,7 @@ let categories = {
 };
 
 let nullCategory = "all";
-let currentCateory = "all";
+let currentCategory = "all";
 
 /* Store todo information in JavaScript so you can use the "all" display */
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTodoAdd(event) {
         event.preventDefault();
 
-        let todoList = document.getElementById("todo-list-" + currentCateory);
+        let todoList = document.getElementById("todo-list-" + currentCategory);
         let todoFormName = document.getElementById("todo-form-name");
         let todoFormCategory = document.getElementById("todo-form-category");
 
@@ -121,7 +121,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoCategoryChange(event) {
-        currentCateory = event.target.value;
+        currentCategory = event.target.value;
+        
+        let todoCategories = document.getElementsByClassName("todo-category-button");
+
+        for (let i = 0; i < todoCategories.length; i++) {
+            
+        }
     }
 
     function handleTodoComplete(event) {

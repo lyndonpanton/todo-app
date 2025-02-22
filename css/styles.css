@@ -64,15 +64,19 @@ header {
     /* background-color: #0F96FC; */
     background-color: rgb(80, 80, 180);
 
-    transition-property: left;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
+    transition: left 0.5s ease-in;
+}
+
+.todo-category-button:hover {
+    text-decoration: underline;
+}
+
+.todo-category-button-current {
+    font-weight: bold;
 }
 
 .todo-categories-open {
-    transition-property: left;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+    transition-property: left 0.5s ease-out;
 
     left: 0px !important;
 }
