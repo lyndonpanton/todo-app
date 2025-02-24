@@ -188,6 +188,11 @@ select {
     /* margin: 0 auto; */
 }
 
+#todo-container {
+    height: 680px;
+    overflow-y: scroll;
+}
+
 #todo-categories {
     left: -200px;
     width: 200px;
