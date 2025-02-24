@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoDelete(event) {
-        let todo = event.target.parentElement;
+        let todo = event.target.parentElement.parentElement;
         todo.remove();
     }
 
