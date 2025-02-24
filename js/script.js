@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 categoryButtons[i].classList.remove("todo-category-button-current");
             }
         }
+
+        // Close sidebar
+        document.getElementById("todo-categories").classList.remove("todo-categories-open");
     }
     
     function handleTodoAdd(event) {
