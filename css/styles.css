@@ -54,8 +54,19 @@ header {
     color: white;
 }
 
-.todo-list {
+.todo-item:first-of-type {
+    border-top: 1px solid grey;
+}
 
+.todo-item {
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+    padding: 10px 5px 10px 0;
+}
+
+.todo-list {
+    height: 70%;
+    overflow-y: scroll;
 }
 
 .todo-list-hidden {

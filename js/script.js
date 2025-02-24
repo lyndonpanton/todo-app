@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Close sidebar
-        document.getElementById("todo-categories").classList.remove("todo-categories-open");
+        document.getElementById("todo-categories")
+                .classList.remove("todo-categories-open");
     }
     
     function handleTodoAdd(event) {
