@@ -15,6 +15,13 @@ body, html {
     font-size: 16px;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+
+    height: 100px;
+}
+
 h1 {
     margin: 0;
     text-align: center;
@@ -178,6 +185,12 @@ header {
     background-color: rgb(80, 80, 180);
 
     transition: left 0.5s ease-in;
+}
+
+#todo-form {
+    position: absolute;
+    /* Based on footer height */
+    bottom: 100px;
 }
 
 @media screen and (max-width: 500px) {
