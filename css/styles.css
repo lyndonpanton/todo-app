@@ -62,17 +62,6 @@ header {
     display: none;
 }
 
-#todo-categories {
-    left: -200px;
-    width: 200px;
-    position: absolute;
-    height: 100%;
-    /* background-color: #0F96FC; */
-    background-color: rgb(80, 80, 180);
-
-    transition: left 0.5s ease-in;
-}
-
 .todo-category-button:hover {
     text-decoration: underline;
 }
@@ -140,6 +129,17 @@ header {
     font-size: 2em;
     display: block;
     /* margin: 0 auto; */
+}
+
+#todo-categories {
+    left: -200px;
+    width: 200px;
+    position: absolute;
+    height: 100%;
+    /* background-color: #0F96FC; */
+    background-color: rgb(80, 80, 180);
+
+    transition: left 0.5s ease-in;
 }
 
 @media screen and (max-width: 500px) {

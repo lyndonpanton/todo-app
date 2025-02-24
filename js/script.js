@@ -17,20 +17,8 @@ let currentCategory = "all";
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
-    /* Give each todo list a heading */
-    let todoListHeadings = document.getElementsByClassName("todo-list-heading");
-
-    for (let i = 0; i < todoListHeadings.length; i++) {
-        todoListHeadings[i].textContent =
-                todoListHeadings[i].parentElement.id.slice(
-                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 1,
-                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
-                ).toUpperCase()
-                +
-                todoListHeadings[i].parentElement.id.slice(
-                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
-                );
-    }
+    /* Set the headings for each todo list */
+    setTodoListHeadings();
 
     /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
@@ -70,8 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        for (let i = 0; i < categories.length; i++) {
+        let categoryButtons = document.getElementsByClassName("todo-category-button");
 
+        for (let i = 0; i < categoryButtons.length; i++) {
+            if (categoryButtons[i] == event.target) {
+                categoryButtons[i].classList.add("todo-category-button-current");
+            } else {
+                categoryButtons[i].classList.remove("todo-category-button-current");
+            }
         }
     }
     
@@ -108,21 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        // for (let i = 0; i < Object.keys(categories).length; i++) {
-        //     console.log(i);
-        //     console.log(categories[i] + " vs. " + todoFormCategory.value);
-
-        //     if (categories[i] === todoFormCategory.value) {
-        //         categoryClass += categories[category];
-        //         console.log(categoryClass);
-        //         break;
-        //     }
-            
-        //     // else if (i == Object.keys(categories).length - 1) {
-        //     //     categoryClass += nullCategory;
-        //     // }
-        // }
-
         todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
         
         todoCompleteIcon.addEventListener("click", handleTodoComplete);
@@ -140,27 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoCategoryChange(event) {
-        // currentCategory = event.target.value;
 
-        // let todoLists = document.getElementsByClassName("todo-list");
-
-        // for (let i = 0; i < todoLists.length; i++) {
-        //     let listName =
-        //             todoLists[i].substring(todoLists[i].lastIndexOf("-") + 1);
-        //     console.log(currentCategory + "vs. " + listName);                    
-
-            
-        //     if (currentCategory == listName) {
-        //         /* Display the new category */
-        //         todoLists[i].classList.remove("todo-list-hidden");
-                
-        //         /* Restyle the sidebar category */
-        //     } else {
-        //         /* Hide the category */
-        //         todoLists[i].classList.add("todo-list-hidden");
-        //         /* Restyle the sidebar category */
-        //     }
-        // }
     }
 
     function handleTodoComplete(event) {
@@ -183,6 +142,22 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTodoDelete(event) {
         let todo = event.target.parentElement;
         todo.remove();
+    }
+
+    function setTodoListHeadings() {
+        let todoListHeadings = document.getElementsByClassName("todo-list-heading");
+    
+        for (let i = 0; i < todoListHeadings.length; i++) {
+            todoListHeadings[i].textContent =
+                    todoListHeadings[i].parentElement.id.slice(
+                        todoListHeadings[i].parentElement.id.lastIndexOf("-") + 1,
+                        todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
+                    ).toUpperCase()
+                    +
+                    todoListHeadings[i].parentElement.id.slice(
+                        todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
+                    );
+        }
     }
 
     function toggleSideBar(event) {
