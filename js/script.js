@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTodoListHeadings();
 
     /* Set current category */
+    setInitialDropdownCategory();
 
     /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
@@ -150,6 +151,11 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTodoDelete(event) {
         let todo = event.target.parentElement.parentElement;
         todo.remove();
+    }
+
+    function setInitialDropdownCategory() {
+        document.getElementById("todo-form-category")
+                .getElementsByTagName("option")[0].selected = true;
     }
 
     function setTodoListHeadings() {
