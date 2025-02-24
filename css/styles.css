@@ -61,7 +61,26 @@ header {
 .todo-item {
     border-bottom: 1px solid grey;
     border-collapse: collapse;
-    padding: 10px 5px 10px 0;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.todo-item > .todo-category {
+    float: right;
+    margin-right: 10px;
+}
+
+.todo-item > .todo-item-checkbox {
+    margin-right: 10px;
+}
+
+.todo-item > .todo-item-delete {
+    float: right;
+    
+}
+
+.todo-item > .todo-item-text {
+
 }
 
 .todo-list {

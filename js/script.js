@@ -87,9 +87,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let todoDeleteIcon = document.createElement("i");
         let todoCategory = document.createElement("i");
         
-        todoCompleteIcon.classList.add("fa-regular",  "fa-square");
-        todoDeleteIcon.classList.add("fa-solid", "fa-xmark");
-        todoText.classList.add("todo-text");
+        todoCompleteIcon.classList.add("fa-regular",  "fa-square", "todo-item-checkbox");
+        todoDeleteIcon.classList.add("fa-solid", "fa-xmark", "todo-item-delete");
+        todoText.classList.add("todo-item-text");
         todo.classList.add("todo-item");
 
         /*
@@ -101,12 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
         for (category in categories) {
             if (category == todoFormCategory.value) {
                 categoryClass += categories[category];
-                console.log(categoryClass);
                 break;
             }
         }
 
-        todoCategory.classList.add("fa-solid", "fa-circle", categoryClass);
+        todoCategory.classList.add("fa-solid", "fa-circle", "todo-category", categoryClass);
         
         todoCompleteIcon.addEventListener("click", handleTodoComplete);
         todoDeleteIcon.addEventListener("click", handleTodoDelete);
@@ -114,8 +113,8 @@ document.addEventListener("DOMContentLoaded", function() {
         todoText.appendChild(todoTextContent);
         todo.appendChild(todoCompleteIcon);
         todo.appendChild(todoText);
-        todo.appendChild(todoCategory);
         todo.appendChild(todoDeleteIcon);
+        todo.appendChild(todoCategory);
 
         todoList.appendChild(todo);
 
