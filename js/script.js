@@ -17,6 +17,11 @@ let currentCategory = "all";
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
+    /* Functionality to set up immediately */
+    let todoListHeading = document.getElementById("todo-list-heading");
+    todoListHeading.textContent =
+            currentCategory[0].toUpperCase() + currentCategory.substring(1).toLowerCase();
+
     /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
 

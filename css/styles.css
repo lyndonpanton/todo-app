@@ -20,6 +20,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
 header {
     /* display: flex;
     align-items: center;
