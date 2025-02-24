@@ -84,10 +84,12 @@ document.addEventListener("DOMContentLoaded", function() {
         let todoText = document.createElement("span");
         let todoTextContent = document.createTextNode(todoFormName.value);
         let todoCompleteIcon = document.createElement("i");
+        let todoRightElements = document.createElement("div");
         let todoDeleteIcon = document.createElement("i");
         let todoCategory = document.createElement("i");
         
         todoCompleteIcon.classList.add("fa-regular",  "fa-square", "todo-item-checkbox");
+        todoRightElements.classList.add("todo-item-right");
         todoDeleteIcon.classList.add("fa-solid", "fa-xmark", "todo-item-delete");
         todoText.classList.add("todo-item-text");
         todo.classList.add("todo-item");
@@ -111,10 +113,11 @@ document.addEventListener("DOMContentLoaded", function() {
         todoDeleteIcon.addEventListener("click", handleTodoDelete);
 
         todoText.appendChild(todoTextContent);
+        todoRightElements.appendChild(todoDeleteIcon);
+        todoRightElements.appendChild(todoCategory);
         todo.appendChild(todoCompleteIcon);
         todo.appendChild(todoText);
-        todo.appendChild(todoDeleteIcon);
-        todo.appendChild(todoCategory);
+        todo.appendChild(todoRightElements);
 
         todoList.appendChild(todo);
 

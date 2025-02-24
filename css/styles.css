@@ -65,22 +65,30 @@ header {
     width: 100%;
 }
 
-.todo-item > .todo-category {
+.todo-item .todo-category {
     float: right;
     margin-right: 10px;
 }
 
-.todo-item > .todo-item-checkbox {
-    margin-right: 10px;
-}
-
-.todo-item > .todo-item-delete {
-    float: right;
+.todo-item .todo-item-checkbox {
+    float: left;
     
+    margin-right: 10px;
+}
+
+.todo-item .todo-item-delete {
+    float: right;
+}
+
+.todo-item .todo-item-right {
+    float: right;
+
+    width: 15%;
 }
 
 .todo-item > .todo-item-text {
-
+    display: inline-block;
+    width: 70%;
 }
 
 .todo-list {
