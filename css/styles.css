@@ -43,6 +43,18 @@ header {
     color: white;
 }
 
+input {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+                    AppleGothic, sans-serif;
+    font-weight: bold;
+}
+
+select {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+                    AppleGothic, sans-serif;
+    font-weight: bold;
+}
+
 .hamburger-container {
     position: absolute;
     top: 40px;
@@ -191,6 +203,31 @@ header {
     position: absolute;
     /* Based on footer height */
     bottom: 100px;
+
+    padding-left: 20px;
+    width: 100%;
+}
+
+#todo-form > input[type=text] {
+    /* width: 225px; */
+
+    border: 1px solid black;
+    width: 55%;
+    height: 30px;
+}
+
+#todo-form > select {
+
+    border: 1px solid black;
+    width: 20%;
+    height: 30px;
+}
+
+#todo-form > input[type=submit] {
+
+    border: 1px solid black;
+    width: 20%;
+    height: 30px;
 }
 
 @media screen and (max-width: 500px) {
