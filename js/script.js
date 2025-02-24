@@ -17,10 +17,20 @@ let currentCategory = "all";
 
 /* Functinonality *//////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
-    /* Functionality to set up immediately */
-    let todoListHeading = document.getElementById("todo-list-heading");
-    todoListHeading.textContent =
-            currentCategory[0].toUpperCase() + currentCategory.substring(1).toLowerCase();
+    /* Give each todo list a heading */
+    let todoListHeadings = document.getElementsByClassName("todo-list-heading");
+
+    for (let i = 0; i < todoListHeadings.length; i++) {
+        todoListHeadings[i].textContent =
+                todoListHeadings[i].parentElement.id.slice(
+                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 1,
+                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
+                ).toUpperCase()
+                +
+                todoListHeadings[i].parentElement.id.slice(
+                    todoListHeadings[i].parentElement.id.lastIndexOf("-") + 2
+                );
+    }
 
     /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
@@ -58,6 +68,10 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 categories[i].classList.add("todo-list-hidden");
             }
+        }
+
+        for (let i = 0; i < categories.length; i++) {
+
         }
     }
     
@@ -126,13 +140,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoCategoryChange(event) {
-        currentCategory = event.target.value;
-        
-        let todoCategories = document.getElementsByClassName("todo-category-button");
+        // currentCategory = event.target.value;
 
-        for (let i = 0; i < todoCategories.length; i++) {
+        // let todoLists = document.getElementsByClassName("todo-list");
+
+        // for (let i = 0; i < todoLists.length; i++) {
+        //     let listName =
+        //             todoLists[i].substring(todoLists[i].lastIndexOf("-") + 1);
+        //     console.log(currentCategory + "vs. " + listName);                    
+
             
-        }
+        //     if (currentCategory == listName) {
+        //         /* Display the new category */
+        //         todoLists[i].classList.remove("todo-list-hidden");
+                
+        //         /* Restyle the sidebar category */
+        //     } else {
+        //         /* Hide the category */
+        //         todoLists[i].classList.add("todo-list-hidden");
+        //         /* Restyle the sidebar category */
+        //     }
+        // }
     }
 
     function handleTodoComplete(event) {
