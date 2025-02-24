@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
     /* Set the headings for each todo list */
     setTodoListHeadings();
 
+    /* Set current category */
+
     /* Change category view */
     let categoryButtons = document.getElementsByClassName("todo-category-button");
 
@@ -125,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleTodoCategoryChange(event) {
-
+        currentCategory = event.target.value;
     }
 
     function handleTodoComplete(event) {

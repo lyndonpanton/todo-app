@@ -62,8 +62,12 @@ _todo-id_)
 
 ### Bugs
 
-- Since the dropdown does not reset when the user refreshes the page but the
+- [ ] Since the dropdown does not reset when the user refreshes the page but the
 current category does, the category will be defined as the default category
 until the dropdown option is changed
-- Todo items are no longer added to the lists the user selects, all are being
+- [x] Todo items are no longer added to the lists the user selects, all are being
 added to the default list instead
+- [ ] Application will not work on screens with a lower height, as the todo list
+items will overlap with the footer
+    - Restyle application to use percentages for heights for all primary
+    elements (e.g., header, aside, todo list, footer)
