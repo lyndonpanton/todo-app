@@ -44,6 +44,8 @@ name as another todo item
 - [ ] Users should be able to view each individual category of todo items
 - [ ] Users should be able to view a list of all todo items, regardless of their
 category
+- [ ] Organise `./css/styles.css` to group items by location in application
+(e.g., header, sidebar, main, footer)
 
 ### Conflicts
 

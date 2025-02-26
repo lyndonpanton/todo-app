@@ -237,6 +237,16 @@ select {
     height: 30px;
 }
 
+/* Footer */
+.footer-column-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+#footer-columns {
+    
+}
+
 @media screen and (max-width: 500px) {
     
 }
