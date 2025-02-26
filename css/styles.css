@@ -218,7 +218,7 @@ select {
     /* Based on footer height */
     bottom: 100px;
 
-    padding-left: 20px;
+    padding: 15px 0 15px 20px;
     width: 100%;
 }
 
@@ -241,9 +241,17 @@ select {
 }
 
 /* Footer */
+footer {
+    border-top: 1px solid black;
+}
+
 .footer-column-list {
     padding: 0;
     list-style-type: none;
+}
+
+.footer-column-list-item {
+    margin: 10px 0;
 }
 
 #footer-columns {
@@ -251,6 +259,10 @@ select {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
+}
+
+#footer-rights {
+    padding: 15px 0;
 }
 
 @media screen and (max-width: 500px) {
