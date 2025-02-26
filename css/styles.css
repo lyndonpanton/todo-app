@@ -244,7 +244,10 @@ select {
 }
 
 #footer-columns {
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 500px) {
