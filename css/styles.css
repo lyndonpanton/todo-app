@@ -108,9 +108,18 @@ select {
     width: 15%;
 }
 
-.todo-item > .todo-item-text {
+.todo-item .todo-item-text {
     display: inline-block;
     width: 70%;
+}
+
+.todo-item-complete {
+    color: grey;
+    font-weight: lighter;
+}
+
+.todo-item-complete .todo-item-text {
+    text-decoration: line-through;
 }
 
 .todo-list {
@@ -166,12 +175,6 @@ select {
 
 .todo-category-violet {
     color: violet;
-}
-
-.todo-item-complete {
-    color: grey;
-    text-decoration: line-through;
-    font-weight: lighter;
 }
 
 .todo-item-text {
